@@ -1,14 +1,21 @@
-set(target ${PROG_LIBRARY})
+cmake_minimum_required(VERSION 3.10)
 
-file(GLOB hdrs "*.h")
-file(GLOB srcs "*.cpp")
+set(PROJECT_NAME my_math)
+project(${PROJECT_NAME} LANGUAGES CXX)
 
-add_library(${target} 
-    STATIC 
-        ${srcs} ${hdrs}
+add_library(my_math
+    my_math.cpp
 )
 
-target_include_directories(${target}
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED ON
+    CXX_EXTENSIONS OFF
+)
+
+add_compile_options(-Wall -Wextra -Werror -pedantic)
+
+target_include_directories(${PROJECT_NAME}
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
