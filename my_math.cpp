@@ -4,6 +4,18 @@
 
 #include "math.h"
 
+namespace {
+int factorial_calculation_internal(int num)
+{
+    if (num == 0 || num == 1) {
+        return 1;
+    }
+    return num * factorial_calculation_internal(num - 1);
+}
+}  // namespace
+
+namespace MyMath {
+
 bool sum_calculation(int num1, int num2, int &ans)
 {
     ans = num1 + num2;
@@ -57,14 +69,6 @@ bool pow_calculation(int num1, int num2, int &ans)
     return true;
 }
 
-static int factorial_calculation_internal(int num)
-{
-    if (num == 0 || num == 1) {
-        return 1;
-    }
-    return num * factorial_calculation_internal(num - 1);
-}
-
 bool factorial_calculation(int num, int &ans)
 {
     if (num < 0) {
@@ -73,3 +77,4 @@ bool factorial_calculation(int num, int &ans)
     ans = factorial_calculation_internal(num);
     return true;
 }
+}  // namespace MyMath
