@@ -31,7 +31,7 @@ This produces the `my_math` library.
 #include <iostream>
 
 int result;
-if (sum_calculation(5, 7, result)) {
+if (MyMath::sum_calculation(5, 7, result)) {
     std::cout << "5 + 7 = " << result << '\n';
 }
 ```
