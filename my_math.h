@@ -1,13 +1,13 @@
 #pragma once
 
-namespace MyMath {
-
-bool sum_calculation(int num1, int num2, int &ans);
-bool difference_calculation(int num1, int num2, int &ans);
-bool product_calculation(int num1, int num2, int &ans);
-bool division_calculation(int num1, int num2, int &ans);
-
-bool pow_calculation(int num1, int num2, int &ans);
-bool factorial_calculation(int num, int &ans);
-
-}  // namespace MyMath
+namespace mymath {
+class Calculation {
+   public:
+    int sum(int firstTerm, int secondTerm);
+    int difference(int minuend, int subtrahend);
+    int product(int firstMultiplier, int secondMultiplier);
+    int division(int dividend, int divisor);
+    int pow(int base, int degree);
+    int factorial(int num);
+};
+}  // namespace mymath
