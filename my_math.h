@@ -9,5 +9,8 @@ class Calculation {
     static int division(const int &dividend, const int &divisor);
     static int pow(const int &base, const int &degree);
     static int factorial(const int &num);
+
+   private:
+    static int factorialInternal(const int &num);
 };
 }  // namespace mymath
