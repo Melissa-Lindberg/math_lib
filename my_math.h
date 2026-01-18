@@ -3,11 +3,11 @@
 namespace mymath {
 class Calculation {
    public:
-    static int sum(int firstTerm, int secondTerm);
-    static int difference(int minuend, int subtrahend);
-    static int product(int firstMultiplier, int secondMultiplier);
-    static int division(int dividend, int divisor);
-    static int pow(int base, int degree);
-    static int factorial(int num);
+    static int sum(const int &firstTerm, const int &secondTerm);
+    static int difference(const int &minuend, const int &subtrahend);
+    static int product(const int &firstMultiplier, const int &secondMultiplier);
+    static int division(const int &dividend, const int &divisor);
+    static int pow(const int &base, const int &degree);
+    static int factorial(const int &num);
 };
 }  // namespace mymath
