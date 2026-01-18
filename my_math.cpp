@@ -6,16 +6,22 @@ namespace mymath {
 
 class Calculation {
    public:
-    int sum(int firstTerm, int secondTerm) { return firstTerm + secondTerm; }
+    static int sum(int firstTerm, int secondTerm)
+    {
+        return firstTerm + secondTerm;
+    }
 
-    int difference(int minuend, int subtrahend) { return minuend - subtrahend; }
+    static int difference(int minuend, int subtrahend)
+    {
+        return minuend - subtrahend;
+    }
 
-    int product(int firstMultiplier, int secondMultiplier)
+    static int product(int firstMultiplier, int secondMultiplier)
     {
         return firstMultiplier * secondMultiplier;
     }
 
-    int division(int dividend, int divisor)
+    static int division(int dividend, int divisor)
     {
         if (divisor == 0) {
             throw std::runtime_error("Division by zero is prohibited");
@@ -23,7 +29,7 @@ class Calculation {
         return dividend / divisor;
     }
 
-    int pow(int base, int degree)
+    static int pow(int base, int degree)
     {
         if (degree < 0) {
             throw std::runtime_error(
@@ -50,7 +56,7 @@ class Calculation {
         return ans;
     }
 
-    int factorial(int num)
+    static int factorial(int num)
     {
         if (num < 0) {
             throw std::runtime_error(
@@ -60,7 +66,7 @@ class Calculation {
     }
 
    private:
-    int factorialInternal(int num)
+    static int factorialInternal(int num)
     {
         if (num == 0 || num == 1) {
             return 1;
